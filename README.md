@@ -1,6 +1,6 @@
 # Sublime Text 2 Actionscript 3 Package #
 
-This package provides multiple features for working with Actionscript 3 projects in [http://www.sublimetext.com/](Sublime Text 2).  I wasn't satisfied with any of the existing AS3 packages so I decided to write my own from scratch. Still in an experimental state.
+This package provides multiple features for working with Actionscript 3 projects in [Sublime Text 2](http://www.sublimetext.com/).  I wasn't satisfied with any of the existing AS3 packages so I decided to write my own from scratch. Still in an experimental state.
 
 Note: This package assumes that your source files in your project all live under a common directory name (default "src/", configurable in as3.py).
 
@@ -8,7 +8,7 @@ Features include:
 
 ### Syntax Highlighting ###
 
-Syntax highlighting support for .as files and AS3 embedded in .mxml files.  A few regular expressions were borrowed from [https://github.com/simongregory/actionscript3-tmbundle](https://github.com/simongregory/actionscript3-tmbundle).
+Syntax highlighting support for .as files and AS3 embedded in .mxml files.  A few regular expressions were borrowed from [github.com/simongregory/actionscript3-tmbundle](https://github.com/simongregory/actionscript3-tmbundle).
 
 ### Snippets ###
 
