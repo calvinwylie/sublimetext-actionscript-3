@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Math.abs(${0:$SELECTION})
+]]></content>
+	<tabTrigger>abs</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>Math.abs</description>
+</snippet>

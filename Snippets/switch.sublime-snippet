@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+switch (${1}) {
+	${0}
+	default:
+		${2:break};
+}
+]]></content>
+	<tabTrigger>switch</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>switch statement</description>
+</snippet>

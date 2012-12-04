@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+if (${1}) {
+	${0:$SELECTION}
+}
+else {
+	
+}
+]]></content>
+	<tabTrigger>ifel</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>if else conditional</description>
+</snippet>

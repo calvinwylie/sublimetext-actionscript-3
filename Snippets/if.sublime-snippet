@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+if (${1}) {
+	${0:$SELECTION}
+}
+]]></content>
+	<tabTrigger>if</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>if conditional</description>
+</snippet>

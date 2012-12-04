@@ -1,0 +1,22 @@
+{
+	"cmd": [
+		"mxmlc.exe", 
+
+		"${file}",
+
+		"-library-path+=${project_path}/libs",
+
+		"-output", "${project_path}/bin/${project_base_name}.swf",
+
+		"-debug=false",
+
+		"-target-player=11.5",
+		"-swf-version=18",
+
+		"-default-size", "800", "600",
+		"-default-frame-rate", "30",
+
+		"-static-link-runtime-shared-libraries=true"
+	],
+	"file_regex": "^(.+?)\\(([0-9]+)\\): col: (([0-9]+))(.*)$"
+}

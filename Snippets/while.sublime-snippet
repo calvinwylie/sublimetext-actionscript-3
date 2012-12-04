@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+while (${1}) {
+	${0:$SELECTION}
+}
+]]></content>
+	<tabTrigger>while</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>while loop</description>
+</snippet>

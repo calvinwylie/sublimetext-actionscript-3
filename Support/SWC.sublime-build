@@ -1,0 +1,17 @@
+{
+	"cmd": [
+		"compc.exe", 
+
+		"-include-sources", "${project_path}/src",
+
+		"-library-path+=${project_path}/libs",
+
+		"-output", "${project_path}/bin/${project_base_name}.swc",
+
+		"-debug=false",
+
+		"-target-player=11.5",
+		"-swf-version=18"
+	],
+	"file_regex": "^(.+?)\\(([0-9]+)\\): col: (([0-9]+))(.*)$"
+}

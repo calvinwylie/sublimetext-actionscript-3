@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Math.sin(${0:$SELECTION})
+]]></content>
+	<tabTrigger>sin</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>Math.sin</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Vector.<${1}>
+]]></content>
+	<tabTrigger>vector</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>Vector.&lt;T&gt;</description>
+</snippet>

@@ -1,0 +1,19 @@
+{ "name": "MXML",
+  "scopeName": "text.mxml",
+  "fileTypes": ["mxml"],
+  "patterns": [
+    {
+      "name": "meta.cdata.mxml",
+      "begin": "(?=<!\\[CDATA\\[)",
+      "end": "(?<=\\]\\]>)",
+      "patterns": [
+        {
+          "include": "source.actionscript.3"
+        }
+      ]
+    },
+    {
+      "include": "text.xml"
+    }
+  ]
+}

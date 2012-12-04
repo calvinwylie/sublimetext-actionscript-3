@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Math.cos(${0:$SELECTION})
+]]></content>
+	<tabTrigger>cos</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>Math.cos</description>
+</snippet>

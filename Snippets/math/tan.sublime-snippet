@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Math.tan(${0:$SELECTION})
+]]></content>
+	<tabTrigger>tan</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>Math.tan</description>
+</snippet>

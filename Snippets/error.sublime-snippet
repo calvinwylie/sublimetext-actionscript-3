@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+throw new Error("${1}")
+]]></content>
+	<tabTrigger>error</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>throw error</description>
+</snippet>

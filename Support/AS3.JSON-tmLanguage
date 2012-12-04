@@ -1,0 +1,686 @@
+{ "name": "Actionscript 3",
+  "scopeName": "source.actionscript.3",
+  "fileTypes": ["as"],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#package"
+    },
+    {
+      "include": "#class"
+    },
+    {
+      "include": "#import"
+    },
+    {
+      "include": "#mxml"
+    }
+  ],
+  "repository": {
+    "mxml": {
+      "name": "meta.cdata.actionscript.3",
+      "begin": "<!\\[CDATA\\[",
+      "end": "\\]\\]>",
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#import"
+        },
+        {
+          "include": "#embed_metadata"
+        },
+        {
+          "include": "#class"
+        },
+        {
+          "include": "#use_namespace"
+        },
+        {
+          "include": "#class_declaration"
+        },
+        {
+          "include": "#method"
+        },
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#regexp"
+        },
+        {
+          "include": "#numbers"
+        },
+        {
+          "include": "#primitive_types"
+        },
+        {
+          "include": "#dynamic_type"
+        },
+        {
+          "include": "#language_constants"
+        },
+        {
+          "include": "#language_variables"
+        },
+        {
+          "include": "#other_keywords"
+        },
+        {
+          "include": "#guess_type"
+        },
+        {
+          "include": "#guess_constant"
+        },
+        {
+          "include": "#other_operators"
+        },
+        {
+          "include": "#arithmetic_operators"
+        },
+        {
+          "include": "#array_access_operators"
+        },
+        {
+          "include": "#vector_creation_operators"
+        },
+        {
+          "include": "#variable_declaration"
+        }
+      ]
+    },
+
+    "package": {
+      "name": "meta.package.actionscript.3",
+      "begin": "(^|\\s+)(package)\\b",
+      "beginCaptures": {
+        "2": { "name": "keyword.other.actionscript.3" }
+      },
+      "end": "\\}",
+      "patterns": [
+        {
+          "include": "#package_name"
+        },
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#import"
+        },
+        {
+          "include": "#use_namespace"
+        },
+        {
+          "include": "#swf_metadata"
+        },
+        {
+          "include": "#class"
+        },
+        {
+          "include": "#interface"
+        }
+      ]
+    },
+
+    "class": {
+      "name": "meta.class.actionscript.3",
+      "begin": "(?x) (^|\\s+|;) (\\b(dynamic|final)\\b\\s+)? (\\b(internal|public)\\b\\s+)? (\\b(dynamic|final)\\b\\s+)? (?=class)",
+      "beginCaptures": {
+        "3": { "name": "storage.modifier.actionscript.3" },
+        "5": { "name": "storage.modifier.actionscript.3" },
+        "7": { "name": "storage.modifier.actionscript.3" }
+      },
+      "end": "\\}",
+      "patterns": [
+        {
+          "include": "#class_declaration"
+        },
+        {
+          "include": "#embed_metadata"
+        },
+        {
+          "include": "#method"
+        },
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#regexp"
+        },
+        {
+          "include": "#numbers"
+        },
+        {
+          "include": "#primitive_types"
+        },
+        {
+          "include": "#dynamic_type"
+        },
+        {
+          "include": "#language_constants"
+        },
+        {
+          "include": "#language_variables"
+        },
+        {
+          "include": "#other_operators"
+        },
+        {
+          "include": "#other_keywords"
+        },
+        {
+          "include": "#use_namespace"
+        },
+        {
+          "include": "#guess_type"
+        },
+        {
+          "include": "#guess_constant"
+        },
+        {
+          "include": "#arithmetic_operators"
+        },
+        {
+          "include": "#array_access_operators"
+        },
+        {
+          "include": "#vector_creation_operators"
+        },
+        {
+          "include": "#variable_declaration"
+        },
+        {
+          "include": "#object_literal"
+        }
+      ]
+    },
+
+    "interface": {
+      "name": "meta.interface.actionscript.3",
+      "begin": "(?x) (^|\\s+|;) (\\b(internal|public)\\b\\s+)? (?=interface)",
+      "beginCaptures": {
+        "3": { "name": "storage.modifier.actionscript.3" }
+      },
+      "end": "\\}",
+      "patterns": [
+        {
+          "include": "#interface_declaration"
+        },
+        {
+          "include": "#functions"
+        },
+        {
+          "include": "#comments"
+        }
+      ]
+    },
+
+    "code_block": {
+      "name": "meta.code_block.actionscript.3",
+      "begin": "\\{",
+      "end": "\\}",
+      "patterns": [
+        {
+          "include": "#code_block"
+        },
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#regexp"
+        },
+        {
+          "include": "#variable_declaration"
+        },
+        {
+          "include": "#numbers"
+        },
+        {
+          "include": "#primitive_types"
+        },
+        {
+          "include": "#dynamic_type"
+        },
+        {
+          "include": "#language_constants"
+        },
+        {
+          "include": "#language_variables"
+        },
+        {
+          "include": "#guess_type"
+        },
+        {
+          "include": "#guess_constant"
+        },
+        {
+          "include": "#other_operators"
+        },
+        {
+          "include": "#arithmetic_operators"
+        },
+        {
+          "include": "#logical_operators"
+        },
+        {
+          "include": "#array_access_operators"
+        },
+        {
+          "include": "#vector_creation_operators"
+        },
+        {
+          "include": "#control_keywords"
+        },
+        {
+          "include": "#other_keywords"
+        },
+        {
+          "include": "#use_namespace"
+        },
+        {
+          "include": "#functions"
+        }
+      ]
+    },
+
+
+
+    "comments": {
+      "patterns": [
+        {
+          "begin": "/\\*",
+          "end": "\\*/",
+          "name": "comment.block.actionscript.3"
+        },
+        {
+          "match": "//.*",
+          "name": "comment.line.actionscript.3"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.actionscript.3"
+        },
+        {
+          "begin": "'",
+          "end": "'",
+          "name": "string.quoted.single.actionscript.3"
+        }
+      ]
+    },
+
+
+
+    "package_name": {
+      "name": "meta.package_name.actionscript.3",
+      "begin": "(?<=package)\\s+([\\w\\._]*)\\b",
+      "end":  "\\{"
+    },
+
+
+    "import": {
+      "name": "meta.import.actionscript.3",
+      "match": "(?x) (^|\\s+|;) (import) \\s+ ([\\w\\.]*?)? ((\\*)|(\\w+)) \\s* (?=;|$)",
+      "captures": {
+        "2": { "name": "keyword.other.actionscript.3" },
+        "4": { "name": "storage.type.actionscript.3" }
+      }
+    },
+
+
+    "swf_metadata": {
+      "name": "meta.swf_info.actionscript.3",
+      "begin": "\\[\\s*\\b(SWF)\\b",
+      "beginCaptures": {
+        "1": { "name": "keyword.other.actionscript.3" }
+      },
+      "end": "\\]",
+      "patterns": [
+        {
+          "include": "#metadata_info"
+        }
+      ]
+    },
+    "embed_metadata": {
+      "name": "meta.swf_info.actionscript.3",
+      "begin": "\\[\\s*\\b(Embed)\\b",
+      "beginCaptures": {
+        "1": { "name": "keyword.other.actionscript.3" }
+      },
+      "end": "\\]",
+      "patterns": [
+        {
+          "include": "#metadata_info"
+        }
+      ]
+    },
+    "metadata_info": {
+      "begin": "\\(",
+      "end": "\\)",
+      "patterns": [
+        {
+          "include": "#strings"
+        },
+        {
+          "match": "(\\w+)\\s*=",
+          "captures": {
+              "1": { "name": "variable.parameter.actionscript.3" }
+          }
+        }
+      ]
+    },
+
+
+    "class_declaration": {
+      "name": "meta.class_declaration.actionscript.3",
+      "begin": "(?x) (class) \\s+ (\\w+)",
+      "beginCaptures": {
+        "1": { "name": "storage.type.actionscript.3" },
+        "2": { "name": "entity.name.class.actionscript.3" }
+      },
+      "end": "\\{",
+      "patterns": [
+        {
+          "include": "#extends"
+        },
+        {
+          "include": "#implements"
+        },
+        {
+          "include": "#multiple_implements"
+        }
+      ]
+    },
+    "extends": {
+      "name": "meta.extends.actionscript.3",
+      "match": "(?x) \\b(extends) \\s+ (\\w+) \\s*",
+      "captures": {
+        "1": { "name": "keyword.other.actionscript.3" },
+        "2": { "name": "entity.other.inherited-class.actionscript.3" }
+      }
+    },
+    "implements": {
+      "name": "meta.implements.actionscript.3",
+      "match": "(?x) \\b(implements) \\s+ (\\w+) \\s*",
+      "captures": {
+        "1": { "name": "keyword.other.actionscript.3" },
+        "2": { "name": "entity.other.inherited-class.actionscript.3" }
+      }
+    },
+    "multiple_implements": {
+      "name": "meta.implements.actionscript.3",
+      "match": ",\\s*(\\w+)\\s*",
+      "captures": {
+        "1": { "name": "entity.other.inherited-class.actionscript.3" }
+      }
+    },
+
+
+    "interface_declaration": {
+      "name": "meta.class_declaration.actionscript.3",
+      "begin": "(?x) (interface) \\s+ (\\w+)",
+      "beginCaptures": {
+        "1": { "name": "storage.type.actionscript.3" },
+        "2": { "name": "entity.name.class.actionscript.3" }
+      },
+      "end": "\\{",
+      "patterns": [
+        {
+          "include": "#extends"
+        }
+      ]
+    },
+
+
+
+    "object_literal": {
+      "name": "meta.object_literal.actionscript.3",
+      "begin": "\\{",
+      "end": "\\}",
+      "patterns": [
+        {
+          "include": "#object_literal"
+        },
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#regexp"
+        },
+        {
+          "include": "#numbers"
+        },
+        {
+          "include": "#primitive_types"
+        },
+        {
+          "include": "#dynamic_type"
+        },
+        {
+          "include": "#language_constants"
+        },
+        {
+          "include": "#language_variables"
+        },
+        {
+          "include": "#guess_type"
+        },
+        {
+          "include": "#guess_constant"
+        },
+        {
+          "include": "#array_access_operators"
+        },
+        {
+          "include": "#vector_creation_operators"
+        },
+        {
+          "include": "#functions"
+        }
+      ]
+    },
+
+
+
+    "other_operators": {
+      "name": "keyword.operator.actionscript.3",
+      "match": "(\\.|=)"
+    },
+    "arithmetic_operators": {
+      "name": "keyword.operator.actionscript.3",
+      "match": "(\\+|\\-|/|%|(?<!:)\\*)"
+    },
+    "logical_operators": {
+      "name": "keyword.operator.actionscript.3",
+      "match": "(&|<|~|\\||>|\\^|!|\\?)"
+    },
+    "array_access_operators": {
+      "name": "keyword.operator.actionscript.3",
+      "match": "(\\[|\\])"
+    },
+    "vector_creation_operators": {
+      "name": "keyword.operator.actionscript.3",
+      "match": "(<|>)"
+    },
+
+
+
+    "control_keywords": {
+      "name": "keyword.control.actionscript.3",
+      "match": "\\b(if|else|do|while|for|each|continue|return|switch|case|default|break|try|catch|finally|throw|trace)\\b"
+    },
+    "other_keywords": {
+      "name": "keyword.other.actionscript.3",
+      "match": "\\b(as|delete|in|instanceof|is|native|new|to|typeof)\\b"
+    },
+
+
+
+    "use_namespace": {
+      "match": "(?x) (^|\\s+|;) (use\\s+)? (namespace) \\s+ (\\w+) \\s* (;|$)",
+      "captures": {
+          "2": { "name": "keyword.other.actionscript.3" },
+          "3": { "name": "keyword.other.actionscript.3" },
+          "4": { "name": "storage.modifier.actionscript.3" }
+      }
+    },
+
+
+    "language_variables": {
+      "name": "variable.language.actionscript.3",
+      "match": "\\b(super|this)\\b"
+    },
+
+
+
+    "numbers": {
+      "name": "constant.numeric.actionscript.3",
+      "match": "\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\\b"
+    },
+
+    "language_constants": {
+      "name": "constant.language.actionscript.3",
+      "match": "\\b(true|false|null|Infinity|-Infinity|NaN|undefined)\\b"
+    },
+
+    "primitive_types": {
+      "match": "\\b(int|uint|Number|Boolean|String|\\*(?<=a))\\b",
+      "captures": {
+          "1": { "name": "storage.type.actionscript.3" }
+      }
+    },
+    "dynamic_type": {
+      "match": "(?<=:)\\s*(\\*)",
+      "captures": {
+          "1": { "name": "storage.type.actionscript.3" }
+      }
+    },
+
+
+    "regexp": {
+      "begin": "(?<=[=(:]|^|return)\\s*(/)(?![/*+{}?])",
+      "end": "(/)[igsmx]*",
+      "patterns": [
+        {
+          "match": ".",
+          "name": "constant.character.escape.actionscript.3"
+        }
+      ]
+    },
+
+
+
+    "guess_type": {
+      "comment": "Following convention, let's guess that any word starting with a capital letter or digit, and at least one lower case letter, refers to a class/type.",
+      "match": "\\b([A-Z0-9]+[a-z]+[a-zA-Z0-9]*)\\b",
+      "captures": {
+          "1": { "name": "storage.type.actionscript.3" }
+      }
+    },
+    "guess_constant": {
+      "comment": "Following convention, let's guess that anything in all caps/digits (possible underscores) is a constant.",
+      "match": "\\b([A-Z0-9_]+)\\b",
+      "captures": {
+          "1": { "name": "constant.other.actionscript.3" }
+      }
+    },
+
+
+
+    "variable_declaration": {
+      "name": "meta.variable_declaration.actionscript.3",
+      "match": "(?x) ((static)\\s+)? ((\\w+)\\s+)? ((static)\\s+)? (const|var) \\s+",
+      "captures": {
+          "2": { "name": "storage.modifier.actionscript.3" },
+          "4": { "name": "storage.modifier.actionscript.3" },
+          "6": { "name": "storage.modifier.actionscript.3" },
+          "7": { "name": "storage.type.actionscript.3" }
+      }
+    },
+
+
+
+    "method": {
+      "name": "meta.method.actionscript.3",
+      "begin": "(?x) (^|\\s+) ((\\w+)\\s+)? ((\\w+)\\s+)? ((\\w+)\\s+)? (\\w+) (?=\\s+function)",
+      "beginCaptures": {
+        "3": { "name": "storage.modifier.actionscript.3" },
+        "5": { "name": "storage.modifier.actionscript.3" },
+        "7": { "name": "storage.modifier.actionscript.3" },
+        "8": { "name": "storage.modifier.actionscript.3" }
+      },
+      "end": "(?<=\\})",
+      "patterns": [
+        {
+          "include": "#functions"
+        },
+        {
+          "include": "#code_block"
+        }
+      ]
+    },
+
+    "functions": {
+      "name": "meta.function.actionscript.3",
+      "begin": "(?x) (^|\\s+) (function) (\\s+(get|set)\\s+)? \\s* ([a-zA-Z0-9_\\$]+)?",
+      "beginCaptures": {
+        "2": { "name": "storage.type.actionscript.3" },
+        "4": { "name": "entity.name.function.actionscript.3" },
+        "5": { "name": "entity.name.function.actionscript.3" }
+      },
+      "end": "(;|(?=\\{))",
+      "patterns": [
+        {
+          "include": "#function_arguments"
+        },
+        {
+          "include": "#return_type"
+        }
+      ]
+    },
+    "function_arguments": {
+      "name": "meta.function_arguments.actionscript.3",
+      "begin": "\\(",
+      "end": "\\)",
+      "patterns": [
+        {
+          "match": "(?x) (\\w+) \\s*(\\:)\\s* ( ((\\w+)|(\\*)) (\\.<(\\w+)>)? (\\s*=\\s* ([\\w_]+))? )|(\\.\\.\\.(\\w+))",
+          "captures": {
+            "1" : { "name" : "variable.parameter.actionscript.3" },
+            "4" : { "name" : "storage.type.actionscript.3" },
+            "8" : { "name" : "storage.type.actionscript.3" },
+            "10" : { "name" : "constant.other.actionscript.3" },
+            "11" : { "name" : "variable.parameter.actionscript.3" }
+          }
+        }
+      ]
+    },
+    "return_type": {
+      "match": "(\\:)\\s*((\\w+)(\\.<(\\w+)>)?|\\*)",
+      "captures": {
+        "3": { "name": "storage.type.actionscript.3" },
+        "5": { "name": "storage.type.actionscript.3" }
+      }
+    }
+  },
+  "uuid": "aa6f75ba-ab10-466e-8c6f-28c69aca1e9d"
+}

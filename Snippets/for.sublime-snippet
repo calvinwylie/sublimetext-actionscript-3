@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+for (${1}; ${2}; ${3}) {
+	${0:$SELECTION}
+}
+]]></content>
+	<tabTrigger>for</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>for loop</description>
+</snippet>

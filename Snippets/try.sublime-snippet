@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+try {
+	${0:$SELECTION}
+}
+catch (${1:e:Error}) {
+	
+}
+finally {
+	
+}
+]]></content>
+	<tabTrigger>try</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>try catch</description>
+</snippet>

@@ -1,0 +1,13 @@
+{
+	"cmd": [
+		"asdoc.exe", 
+
+		"-source-path", "${project_path}/src",
+		"-doc-sources", "${project_path}/src",
+
+		"-output", "${project_path}/Docs",
+
+		"-main-title", "${project_base_name} Documentation",
+		"-window-title", "${project_base_name} Documentation",
+	]
+}

@@ -1,0 +1,17 @@
+package ${package_name}
+{
+	import flash.events.Event;
+	
+	public class ${event_name} extends Event
+	{
+		public function ${event_name}(type:String, bubbles:Boolean=false, cancelable:Boolean=false) 
+		{	
+			super(type, bubbles, cancelable);
+		}
+		
+		public override function clone():Event 
+		{
+			return new ${event_name}(type, bubbles, cancelable);
+		}
+	}
+}

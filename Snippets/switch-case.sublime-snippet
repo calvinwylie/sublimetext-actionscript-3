@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+case ${1}:
+	${0}
+	break;
+]]></content>
+	<tabTrigger>case</tabTrigger>
+	<scope>source.actionscript.3</scope>
+	<description>switch case</description>
+</snippet>

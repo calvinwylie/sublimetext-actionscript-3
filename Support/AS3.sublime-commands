@@ -1,0 +1,22 @@
+[
+  {
+    "caption": "Actionscript 3: Import Class/Interface",
+    "command": "as3_import"
+  },
+  {
+	"caption": "Actionscript 3: New Class",
+	"command": "as3_new_class"
+  },
+  {
+	"caption": "Actionscript 3: New Interface",
+	"command": "as3_new_interface"
+  },
+  {
+	"caption": "Actionscript 3: New Event",
+	"command": "as3_new_event"
+  },
+  {
+	"caption": "Actionscript 3: Extract Interface",
+	"command": "as3_extract_interface"
+  }
+]
